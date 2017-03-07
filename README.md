@@ -28,4 +28,27 @@ ws-webview api说明
 | pushWebView | url | string | required | 打开一个内部webview地址,url:demo/test1?id=1 |
 | popWebView | undefined | undefined | optional | 关闭当前的webview导航 |
 | openWebView | url | string | required | 打开一个外部webview地址,完整的url |
-| toast | text | string | required | 注:使用子方法，不能直接使用 例: toast.show('');toast.info('');toast.warn('');toast.error('') |
+| toast | text | string | required | 注:使用子方法，不能直接使用 例: toast.show('');toast.info('');toast.warn('');toast.error('') 
+| statusBar | hidden/barStyle | bool/string | Ios | barStyle:PropTypes.oneOf(['default', 'light-content']) |
+| statusBar | hidden/backgroundColor/translucent | bool/string/bool | Android | backgroundColor:color |
+
+### addEventListener (data.action)
+
+ - **`getUserInfo`** _(Object)_ - Takes an object.
+ - **`alert`** _(Object)_ - alert array value.
+ 
+ ```javascript
+ setTimeout(function () {
+     ws.addEventListener = function(e){
+         switch (e.action) {
+             case 'getUserInfo':
+                 ws.alert(e.data)     //UserInfo
+                 break;
+             case 'alert':
+                 ws.alert(e.data.value)  //alert value
+                 break;
+             default:
+         }
+     }
+ },500)
+```
