@@ -16,7 +16,7 @@ ws-webview api说明
 ### ws
 
 | func | value | type | required/optional | comment |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- |
 | getUserInfo | undefined | undefined | optional | 返回用户信息，未登录return {} |
 | showGoodsDetail | id | number | required | 跳转到商品详情 |
 | showStoreDetail | id | number | required | 跳转到商户详情 |
@@ -28,7 +28,7 @@ ws-webview api说明
 | pushWebView | url | string | required | 打开一个内部webview地址,url:demo/test1?id=1 |
 | popWebView | undefined | undefined | optional | 关闭当前的webview导航 |
 | openWebView | url | string | required | 打开一个外部webview地址,完整的url |
-| toast | text | string | required | 注:使用子方法，不能直接使用 例: toast.show('');toast.info('');toast.warn('');toast.error('') 
+| toast | text | string | required | 注:使用子方法，不能直接使用 例: toast.show('');toast.info('');toast.warn('');toast.error('') |
 | statusBar | hidden/barStyle | bool/string | Ios | barStyle:PropTypes.oneOf(['default', 'light-content']) |
 | statusBar | hidden/backgroundColor/translucent | bool/string/bool | Android | backgroundColor:color |
 
